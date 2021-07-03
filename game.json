@@ -2542,6 +2542,32 @@
           "identifier": "https://resources.gdevelop-app.com/assets/Pirate Bomb Pack/Characters/Bald Pirate/Bald Pirate_Idle_32.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Desert Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Desert Background.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/pzUH Pack/Worlds/Desert/Desert Background.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled_Desert Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Desert Background.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Generic Backgrounds/tiled_Desert Background.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -2575,7 +2601,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1.0800000000000005
+        "zoomFactor": 0.7600000000000002
       },
       "objectsGroups": [],
       "variables": [],
@@ -2610,7 +2636,7 @@
           "locked": false,
           "name": "WoodBackground",
           "persistentUuid": "172bb9aa-e348-4bdd-935a-08ae713322c2",
-          "width": 2080,
+          "width": 3151,
           "x": -293,
           "y": 538,
           "zOrder": 2,
@@ -2643,9 +2669,9 @@
           "name": "Limits",
           "persistentUuid": "e0dfdaad-89ba-4bda-b7de-011d228f4dce",
           "width": 64,
-          "x": -66,
+          "x": -79,
           "y": -42,
-          "zOrder": -1,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2678,6 +2704,22 @@
           "x": 717,
           "y": 496,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 783,
+          "layer": "",
+          "locked": false,
+          "name": "DesertBackground",
+          "persistentUuid": "a5a657aa-0737-425f-ad19-012b7ee06968",
+          "width": 3153,
+          "x": -296,
+          "y": -180,
+          "zOrder": -6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9631,6 +9673,16 @@
               ]
             }
           ]
+        },
+        {
+          "height": 128,
+          "name": "DesertBackground",
+          "tags": "",
+          "texture": "tiled_Desert Background.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 128,
+          "variables": [],
+          "behaviors": []
         }
       ],
       "events": [
@@ -9663,7 +9715,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Animacion de moverse",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10039,7 +10091,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -10055,53 +10107,43 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
                 }
               ],
-              "actions": [],
-              "events": [
+              "actions": [
                 {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": [],
-                      "subInstructions": []
-                    }
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Captain",
+                    "\"Hit\""
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Captain",
-                        "\"Hit\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Captain",
-                        "life",
-                        "-",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    }
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Captain",
+                    "life",
+                    "-",
+                    "1"
                   ],
-                  "events": []
+                  "subInstructions": []
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "disabled": false,
