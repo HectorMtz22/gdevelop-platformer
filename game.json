@@ -2906,6 +2906,41 @@
           "identifier": "https://resources.gdevelop-app.com/assets/Pirate Bomb Pack/Objects/Heart/Heart_Idle_18.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Table.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Table.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Pirate Bomb Pack/Objects/Other Objects/Table.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewFile-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewFile-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/High spikes.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "High spikes.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Abstract Platformer Pack (370 assets)/PNG/Other/High spikes.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -2939,7 +2974,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.7600000000000002
+        "zoomFactor": 0.8
       },
       "objectsGroups": [],
       "variables": [],
@@ -2974,7 +3009,7 @@
           "locked": false,
           "name": "WoodBackground",
           "persistentUuid": "172bb9aa-e348-4bdd-935a-08ae713322c2",
-          "width": 3151,
+          "width": 1623,
           "x": -293,
           "y": 538,
           "zOrder": 2,
@@ -3054,10 +3089,234 @@
           "locked": false,
           "name": "DesertBackground",
           "persistentUuid": "a5a657aa-0737-425f-ad19-012b7ee06968",
-          "width": 3153,
+          "width": 4083,
           "x": -296,
           "y": -180,
           "zOrder": -6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "bd6f8a7e-96fa-4b16-91e2-fde9e27c3350",
+          "width": 0,
+          "x": 1020,
+          "y": 512,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "e5bfff4f-29e8-4355-a789-88907cedcaeb",
+          "width": 0,
+          "x": 1098,
+          "y": 512,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "cf55c823-6d74-4933-a96d-2ae2c407591b",
+          "width": 0,
+          "x": 1097,
+          "y": 483,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "a0dcf9ac-52cb-453a-aa6f-ad95504937b1",
+          "width": 0,
+          "x": 1097,
+          "y": 483,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "acd1a6ba-3b5d-4863-b6cc-e7e55e24c7bb",
+          "width": 0,
+          "x": 1176,
+          "y": 481,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "f988c10e-68e8-4648-914e-e3650c7194a5",
+          "width": 0,
+          "x": 1175,
+          "y": 511,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "7a31a0a7-1758-4d1f-a9af-e4a4d7573413",
+          "width": 0,
+          "x": 1175,
+          "y": 451,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "3945f71f-cf5c-4579-98cb-5aa7cac8e59a",
+          "width": 0,
+          "x": 1253,
+          "y": 451,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "8d102746-8e56-4dce-9833-3d14a77ecdd0",
+          "width": 0,
+          "x": 1253,
+          "y": 482,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "41d8259f-39f6-4b4c-ae34-67945faa501f",
+          "width": 0,
+          "x": 1251,
+          "y": 511,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Table",
+          "persistentUuid": "0d011488-0f70-4972-97ef-0e266b847952",
+          "width": 0,
+          "x": 1250,
+          "y": 423,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "WoodBackground",
+          "persistentUuid": "92c834c5-4de3-4236-bf1f-4f9d65cc0cf5",
+          "width": 2294,
+          "x": 1496,
+          "y": 544,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 88,
+          "layer": "",
+          "locked": false,
+          "name": "Out",
+          "persistentUuid": "c9e28ff6-8d65-4eda-994c-dacf8a11565b",
+          "width": 497,
+          "x": 1166,
+          "y": 612,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "HighSpikes",
+          "persistentUuid": "8916d2a1-bdda-4c27-8c0a-bed3fe27e3fe",
+          "width": 0,
+          "x": 1682,
+          "y": 519,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3071,11 +3330,6 @@
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
-            {
-              "extraBorder": 0,
-              "name": "DestroyOutside",
-              "type": "DestroyOutsideBehavior::DestroyOutside"
-            },
             {
               "acceleration": 1500,
               "canGrabPlatforms": false,
@@ -10497,6 +10751,102 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Table",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Table.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "height": 32,
+          "name": "Out",
+          "tags": "",
+          "texture": "NewFile-1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "name": "HighSpikes",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "High spikes.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -11036,16 +11386,39 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "CollisionNP"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "Captain",
-                    "Enemy",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Captain",
+                        "Enemy",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Captain",
+                        "HighSpikes",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
                 },
                 {
                   "type": {
@@ -11255,6 +11628,42 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Captain",
+                "Out",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Level 1\"",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
