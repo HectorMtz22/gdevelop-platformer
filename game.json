@@ -3154,6 +3154,19 @@
           "identifier": "https://resources.gdevelop-app.com/assets/Generic Backgrounds/tiled_Fall Trees Background.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Close round button.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Close round button.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Shaded Light/Close round button.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -11706,7 +11719,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Camera and Layout",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11791,7 +11804,7 @@
                   "parameters": [
                     "",
                     "sounds\\adventure.wav",
-                    "",
+                    "yes",
                     "80",
                     ""
                   ],
@@ -12503,6 +12516,17 @@
                 "\"Opening\""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PushScene"
+              },
+              "parameters": [
+                "",
+                "\"Win\""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -12604,6 +12628,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CloseRoundButton",
+          "persistentUuid": "062b7aad-5ec3-415c-97ae-9828fbacebef",
+          "width": 0,
+          "x": 365,
+          "y": 387,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -12635,9 +12675,116 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "CloseRoundButton",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Close round button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
-      "events": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "sounds\\adventure.wav",
+                "yes",
+                "80",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "CloseRoundButton",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Quit"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 8192016,
