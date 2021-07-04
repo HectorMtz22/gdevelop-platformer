@@ -5114,7 +5114,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.25,
+                  "timeBetweenFrames": 0.08330000191926956,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -11452,10 +11452,10 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "Ladder",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "Ladder",
               "yGrabOffset": 0
             }
           ]
@@ -11470,10 +11470,10 @@
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ]
@@ -11719,7 +11719,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Camera and Layout",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11764,7 +11764,7 @@
                     "Heart",
                     "20",
                     "20",
-                    "\"vida\""
+                    "\"GUI\""
                   ],
                   "subInstructions": []
                 },
@@ -11776,9 +11776,9 @@
                   "parameters": [
                     "Heart",
                     "Heart",
-                    "40",
                     "20",
-                    "\"vida\""
+                    "20",
+                    "\"GUI\""
                   ],
                   "subInstructions": []
                 },
@@ -11790,9 +11790,9 @@
                   "parameters": [
                     "Heart",
                     "Heart",
-                    "30",
                     "20",
-                    "\"vida\""
+                    "20",
+                    "\"GUI\""
                   ],
                   "subInstructions": []
                 },
@@ -11822,12 +11822,14 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "MettreX"
+                    "value": "SetCameraX"
                   },
                   "parameters": [
-                    "Heart",
+                    "",
                     "=",
-                    "Captain.X() - 200"
+                    "Captain.X() + 150",
+                    "",
+                    ""
                   ],
                   "subInstructions": []
                 },
@@ -11854,20 +11856,6 @@
                     ""
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetCameraX"
-                  },
-                  "parameters": [
-                    "",
-                    "=",
-                    "Captain.X() + 150",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
                 }
               ],
               "events": []
@@ -11881,7 +11869,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Animacion de moverse",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11894,22 +11882,23 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "PlatformBehavior::CurrentSpeed"
+                    "value": "PlatformBehavior::IsOnFloor"
                   },
                   "parameters": [
                     "Captain",
-                    "PlatformerObject",
-                    "=",
-                    "0"
+                    "PlatformerObject"
                   ],
                   "subInstructions": []
                 },
                 {
                   "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
+                    "inverted": true,
+                    "value": "PlatformBehavior::IsMoving"
                   },
-                  "parameters": [],
+                  "parameters": [
+                    "Captain",
+                    "PlatformerObject"
+                  ],
                   "subInstructions": []
                 }
               ],
@@ -11937,7 +11926,7 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "PlatformBehavior::IsJumping"
+                    "value": "PlatformBehavior::IsOnFloor"
                   },
                   "parameters": [
                     "Captain",
@@ -11948,9 +11937,45 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
+                    "value": "PlatformBehavior::IsMoving"
                   },
-                  "parameters": [],
+                  "parameters": [
+                    "Captain",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Captain",
+                    "=",
+                    "9"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::IsJumping"
+                  },
+                  "parameters": [
+                    "Captain",
+                    "PlatformerObject"
+                  ],
                   "subInstructions": []
                 }
               ],
@@ -11977,47 +12002,6 @@
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
-                    "value": "PlatformBehavior::IsOnFloor"
-                  },
-                  "parameters": [
-                    "Captain",
-                    "PlatformerObject"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "Captain",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
                     "inverted": true,
                     "value": "PlatformBehavior::IsMoving"
                   },
@@ -12025,14 +12009,6 @@
                     "Enemy",
                     "PlatformerObject"
                   ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
                   "subInstructions": []
                 }
               ],
@@ -12059,116 +12035,61 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "PlatformBehavior::IsMoving"
+                    "value": "KeyPressed"
                   },
                   "parameters": [
-                    "Captain",
-                    "PlatformerObject"
+                    "",
+                    "Left"
                   ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
                   "subInstructions": []
                 }
               ],
-              "actions": [],
-              "events": [
+              "actions": [
                 {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlatformBehavior::CurrentSpeed"
-                      },
-                      "parameters": [
-                        "Captain",
-                        "PlatformerObject",
-                        ">",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "Captain",
+                    "yes"
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "FlipX"
-                      },
-                      "parameters": [
-                        "Captain",
-                        "no"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Captain",
-                        "\"Run\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlatformBehavior::CurrentSpeed"
-                      },
-                      "parameters": [
-                        "Captain",
-                        "PlatformerObject",
-                        "<",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "FlipX"
-                      },
-                      "parameters": [
-                        "Captain",
-                        "yes"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Captain",
-                        "\"Run\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
+                  "subInstructions": []
                 }
-              ]
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Right"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "Captain",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -12179,7 +12100,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Colisiones",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12342,7 +12263,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Timer Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12376,6 +12297,17 @@
                     "PlatformerObject"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -12407,6 +12339,17 @@
                   "parameters": [
                     "Enemy",
                     "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "yes"
                   ],
                   "subInstructions": []
                 }
@@ -12553,6 +12496,17 @@
               "width": 0
             }
           ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 1,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "GUI",
+          "visibility": true,
+          "cameras": [],
           "effects": []
         }
       ],
