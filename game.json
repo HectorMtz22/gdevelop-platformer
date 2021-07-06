@@ -3200,7 +3200,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.6199999999999999
+        "zoomFactor": 0.6399999999999999
       },
       "objectsGroups": [],
       "variables": [],
@@ -11265,7 +11265,7 @@
               ]
             },
             {
-              "name": "LivePlus1",
+              "name": "No",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -11807,6 +11807,17 @@
                     "yes",
                     "80",
                     ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"NextScene\""
                   ],
                   "subInstructions": []
                 }
@@ -12452,6 +12463,17 @@
             {
               "type": {
                 "inverted": false,
+                "value": "UnPauseTimer"
+              },
+              "parameters": [
+                "",
+                "\"NextScene\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "SetAnimationName"
               },
               "parameters": [
@@ -12459,7 +12481,29 @@
                 "\"Opening\""
               ],
               "subInstructions": []
-            },
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "1",
+                "\"NextScene\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
             {
               "type": {
                 "inverted": false,
