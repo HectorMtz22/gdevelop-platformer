@@ -11383,7 +11383,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.7399999999999998
+        "zoomFactor": 0.5399999999999996
       },
       "objectsGroups": [],
       "variables": [],
@@ -11396,7 +11396,7 @@
           "locked": false,
           "name": "WoodBackground",
           "persistentUuid": "07415033-2028-43ed-9acf-505ef1434371",
-          "width": 1410,
+          "width": 2721,
           "x": -357,
           "y": 514,
           "zOrder": 1,
@@ -11512,6 +11512,54 @@
           "x": 366,
           "y": 443,
           "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "GUI",
+          "locked": false,
+          "name": "puntos",
+          "persistentUuid": "734cc972-cf42-44c3-a2ee-083d941d4446",
+          "width": 0,
+          "x": 767,
+          "y": 23,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "GUI",
+          "locked": false,
+          "name": "GreenBottle",
+          "persistentUuid": "220d8448-fc54-473b-ad89-420052f079e0",
+          "width": 0,
+          "x": 741,
+          "y": 22,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Door",
+          "persistentUuid": "ae27f696-7926-4f66-8eaf-278bba3aa298",
+          "width": 0,
+          "x": 1995,
+          "y": 420,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -11905,48 +11953,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "Heart",
-                    "Heart",
-                    "20",
-                    "20",
-                    "\"GUI\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "Heart",
-                    "Heart",
-                    "20",
-                    "20",
-                    "\"GUI\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "Heart",
-                    "Heart",
-                    "20",
-                    "20",
-                    "\"GUI\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "PlayMusic"
                   },
                   "parameters": [
@@ -11966,6 +11972,41 @@
                   "parameters": [
                     "",
                     "\"NextScene\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "GlobalVariable(vidas)",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "Heart",
+                    "Heart",
+                    "20",
+                    "20",
+                    "\"GUI\""
                   ],
                   "subInstructions": []
                 }
