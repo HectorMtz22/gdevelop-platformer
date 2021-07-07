@@ -11383,7 +11383,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.5399999999999996
+        "zoomFactor": 0.4399999999999995
       },
       "objectsGroups": [],
       "variables": [],
@@ -12341,7 +12341,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Colisiones",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12520,7 +12520,7 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarScene"
+                    "value": "ModVarGlobal"
                   },
                   "parameters": [
                     "puntos",
@@ -12568,7 +12568,7 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarScene"
+                    "value": "ModVarGlobal"
                   },
                   "parameters": [
                     "puntos",
