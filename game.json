@@ -11645,7 +11645,16 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -11900,7 +11909,16 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        }
+      ]
     }
   ],
   "externalEvents": [
@@ -11959,7 +11977,7 @@
                     "",
                     "sounds\\adventure.wav",
                     "yes",
-                    "50",
+                    "30",
                     ""
                   ],
                   "subInstructions": []
@@ -12341,7 +12359,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Colisiones",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
